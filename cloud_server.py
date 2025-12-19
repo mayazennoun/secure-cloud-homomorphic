@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# --- Initialisation Pyfhel côté serveur ---
+
 HE = Pyfhel()
 HE.contextGen(scheme='CKKS', n=2**14, scale=2**30, qi_sizes=[60, 30, 30, 30, 60])
 
