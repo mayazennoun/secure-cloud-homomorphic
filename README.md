@@ -34,3 +34,31 @@ Prototype de calculs sécurisés sur des données chiffrées dans le cloud utili
 Client -> Chiffrement des données -> Serveur
 Serveur -> Calcul homomorphe -> Résultat chiffré -> Client
 Client -> Déchiffrement -> Affichage des résultats
+
+---
+Installation
+git clone https://github.com/mayazennoun/secure-cloud-homomorphic.git
+cd secure-cloud-homomorphic
+
+# Créer et activer l'environnement virtuel
+python -m venv env
+& env/Scripts/Activate.ps1  # Windows PowerShell
+
+# Installer les dépendances
+pip install pyfhel flask requests numpy
+
+Utilisation
+
+Génération des clés (si elles n’existent pas) :
+Génération des clés (si elles n’existent pas) :
+
+python client.py
+
+
+Lancer le serveur :
+
+python cloud_server.py
+
+
+Saisir les données côté client :
+Relancer client.py et entrer les nombres séparés par des espaces.
