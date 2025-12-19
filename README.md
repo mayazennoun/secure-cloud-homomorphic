@@ -9,6 +9,7 @@ Prototype de calculs sécurisés sur des données chiffrées dans le cloud utili
 
 ## Fonctionnalités
 
+
 - 🔑 Génération automatique de clés publiques et privées
 - 🔒 Chiffrement des données côté client
 - 🖥️ Calculs homomorphes côté serveur (somme, moyenne)
