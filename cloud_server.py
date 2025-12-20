@@ -17,7 +17,7 @@ HE.load_public_key("public_key.pk")
 
 def deserialize_ctxt(data_str):
     """Convertit une chaîne base64 en PyCtxt (avec instance HE)"""
-    ctxt = PyCtxt(pyfhel=HE)  # important : lier PyCtxt à HE
+    ctxt = PyCtxt(pyfhel=HE)  
     ctxt.from_bytes(base64.b64decode(data_str))
     return ctxt
 
@@ -31,7 +31,7 @@ def compute():
         data = request.json['encrypted_data']
         encrypted_list = [deserialize_ctxt(x) for x in data]
 
-        # Calcul homomorphe : somme et moyenne
+        
         sum_enc = encrypted_list[0]
         for enc in encrypted_list[1:]:
             sum_enc += enc
